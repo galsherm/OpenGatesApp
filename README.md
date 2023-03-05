@@ -4,7 +4,7 @@ This app will allow to open parking barrier gate by automatic phone call.
 It's done by set phone number and location when you get closer to the gate.
 
 
-#Demo of the app:
+# Demo of the app:
 
 https://user-images.githubusercontent.com/80771260/222978494-5dbe2f55-3c14-4d51-8fef-cafc7553bebf.mp4
 
