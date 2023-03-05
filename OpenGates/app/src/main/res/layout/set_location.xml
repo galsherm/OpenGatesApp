@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <!--fragment to display our maps-->
+
+    <!--search view to search our location-->
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="0dp"
+        tools:context=".MapsActivity"
+        tools:layout="@android:layout/activity_list_item" />
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/idSearchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#8B98DD"
+        android:elevation="5dp"
+        app:iconifiedByDefault="false"
+        app:queryHint="Search Here" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        android:layout_below="@+id/map"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="0dp"
+
+        android:layout_marginBottom="0dp"
+        android:orientation="vertical">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:id="@+id/radiusLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:visibility="invisible">
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/infoLocationBtn"
+                android:layout_width="1dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/info"
+                android:elevation="10dp"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="clip_vertical"
+                android:layout_weight="1"
+                android:text="Radius:"
+                android:textStyle="bold" />
+
+            <SeekBar
+                android:id="@+id/radiusSeekBr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="200"
+                android:min="1" />
+
+            <TextView
+                android:id="@+id/seekBarTxtView"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="clip_vertical"
+                android:layout_weight="1" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/uncheckPointBtn"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_button"
+                android:text="Unselect Point"
+                android:textColor="#FFFFFF" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/savePointBtn"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_button"
+                android:text="Save Point"
+                android:textColor="#FFFFFF" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
